@@ -18,16 +18,18 @@ public class BMIandStore {
      */
     public static void main(String[] args) {
         boolean RUN=true;
+        String RUN2="Nothing";
         while(RUN==true)
         {
     Scanner reader= new Scanner(System.in);//Reading from the System in 
-        System.out.println("What is the person height in centimeters");
-    double height=reader.nextInt();
+        System.out.println("What is the person height in Meters");
+    double height=reader.nextDouble();
     System.out.println("what is the person weight in kg(1 kg=2.2kg)?");
-    double weight=reader.nextInt();
-    System.out.println("BMI="+weight/height);
+    double weight=reader.nextDouble();
+    System.out.println("BMI="+weight/(height*height));
     System.out.println("Whould you like to run Agian? True or False");
-    String RUN2=reader.toString();
+    RUN2=reader.next();
+    
     if (RUN2.equals("True") || RUN2.equals("true"))
     {
         RUN=true;
